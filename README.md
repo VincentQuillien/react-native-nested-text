@@ -1,4 +1,6 @@
 ```ts
+import Text, { TreeStyle } from 'react-native-nested-text';
+
 const treeStyle: TreeStyle = {
   s: main,
   sb: [{ s: blue, sb: [{ s: red }] }, { s: green }],
