@@ -6,7 +6,7 @@ const treeStyle: TreeStyle = {
   sb: [{ s: blue, sb: [{ s: red }] }, { s: green }],
 };
 
-<Text style={testStyle}>
+<Text style={treeStyle}>
   {'Lorem <{ipsum <{dolor}> sit amet}>, consectetur <{adipiscing}> elit'}
 </Text>
 
