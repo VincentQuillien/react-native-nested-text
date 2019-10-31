@@ -6,7 +6,8 @@
     "outDir": "./lib",
     "strict": true,
     "jsx": "react-native",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
