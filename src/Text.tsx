@@ -1,5 +1,5 @@
 import { TextProps, TextStyle, Text as RNText, StyleSheet } from "react-native";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 interface Nd<T> {
   nd: Tree<T>[];
