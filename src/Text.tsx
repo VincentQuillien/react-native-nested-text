@@ -1,4 +1,4 @@
-import { TextProps, TextStyle, Text as RNText, StyleSheet } from "react-native";
+import { TextProps, TextStyle, Text as RNText } from "react-native";
 import React, { ReactNode } from "react";
 
 interface Nd<T> {
@@ -7,10 +7,7 @@ interface Nd<T> {
 
 type Tree<T> = Nd<T> | T;
 
-export interface TreeStyle {
-  s: TextStyle;
-  sb?: TreeStyle[];
-}
+export type StyleTree = [TextStyle, StyleTree[]?];
 
 /**
  * Parse the input string to produce a tree of the nested tag
@@ -40,10 +37,10 @@ function stringToTree(text: string) {
 /**
  * Merge the tree of strings and the tree of styles into a tree of jsx text elements
  */
-function mergeToJsx(stringTree: Tree<string>, styleTree: TreeStyle) {
+function mergeToJsx(stringTree: Tree<string>, styleTree: StyleTree) {
   const aux = (
     stringChildren: Tree<string>[],
-    styleChildren: TreeStyle[]
+    styleChildren: StyleTree[] | undefined = []
   ): ReturnType<typeof mergeToJsx>[] => {
     const [strHd, ...strTl] = stringChildren;
     const [stlHd, ...stlTl] = styleChildren;
@@ -61,23 +58,24 @@ function mergeToJsx(stringTree: Tree<string>, styleTree: TreeStyle) {
   if (typeof stringTree === "string") {
     return stringTree;
   }
+  const [style, styleChildren] = styleTree;
   return (
-    <RNText style={styleTree.s} key={stringTree.nd.toString()}>
-      {aux(stringTree.nd, styleTree.sb || [])}
+    <RNText style={style} key={stringTree.nd.toString()}>
+      {aux(stringTree.nd, styleChildren)}
     </RNText>
   );
 }
 
-type Props = Omit<TextProps, "style"> & {
-  style: TextProps["style"] | TreeStyle;
+type Props = TextProps & {
+  styleTree?: StyleTree;
   children?: ReactNode;
 };
 
-const Text = ({ style, children, ...props }: Props) => {
+const Text = ({ styleTree, children, ...props }: Props) => {
   return (
     <RNText {...props}>
-      {style && "s" in style && typeof children === "string"
-        ? mergeToJsx(stringToTree(children), style)
+      {styleTree && typeof children === "string"
+        ? mergeToJsx(stringToTree(children), styleTree)
         : children}
     </RNText>
   );

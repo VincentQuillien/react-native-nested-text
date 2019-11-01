@@ -4,11 +4,13 @@
   "description": "",
   "main": "lib/Text.js",
   "types": "lib/Text.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare" : "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,6 @@
     "react-native": "^0.60",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.1-rc"
   }
 }

@@ -6,3 +6,8 @@ npm-debug.log
 yarn-error.log
 lib/
   
+# vscode
+.vscode
+
+# watchman
+.watchmanconfig
