@@ -1,6 +1,6 @@
 {
   "name": "react-native-nested-text",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,7 +17,11 @@
     "url": "git+https://github.com/VincentQuillien/react-native-nested-text.git"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "typescript",
+    "text",
+    "style",
+    "nested"
   ],
   "author": "",
   "license": "",
