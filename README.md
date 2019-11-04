@@ -1,12 +1,12 @@
 ```ts
-import Text, { StyleTree } from 'react-native-nested-text';
+import Text from 'react-native-nested-text';
 
-const { main, blue, red, green } = stylesheet;
+const { blue, red, green } = stylesheet;
 
-const style: StyleTree = [main, [[blue, [[red]]], [green]]];
+const styles = { r: red, g: green, b: blue };
 
-<Text styleTree={style}>
- {'Lorem <{ipsum <{dolor}> sit amet}>, consectetur <{adipiscing}> elit'}
+<Text nestedStyles={styles}>
+ {'Lorem <{b|ipsum <{r|dolor}> sit amet}>, consectetur <{g|adipiscing}> elit'}
 </Text>
 ```
 
