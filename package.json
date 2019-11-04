@@ -2,8 +2,8 @@
   "name": "react-native-nested-text",
   "version": "0.1.0",
   "description": "",
-  "main": "lib/Text.js",
-  "types": "lib/Text.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],

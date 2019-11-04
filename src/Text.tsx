@@ -16,7 +16,9 @@ function mapToJsx(tree: TextTree, styles: StylesDict): string | JSX.Element {
     return <>{children.map(subTree => mapToJsx(subTree, styles))}</>;
   }
   const style = styles[styleName];
-  if (!style) console.warn(`can't find style ${styleName}`);
+  if (!style) {
+    console.warn(`can't find style ${styleName}`);
+  }
 
   return (
     <RNText style={style || {}} key={children.toString()}>
