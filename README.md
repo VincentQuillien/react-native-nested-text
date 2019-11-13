@@ -34,7 +34,7 @@ React Native currently only allows a single style by Text element so you need to
 It breaks the flow of the text and it quickly becomes hard to read, especially when you have nesting several levels deep.
 If you are using internationalisation it will also significantly grow the number of entries in your translation files.
 
-The same exemple as above in React Native vanilla :
+The same example as above in React Native vanilla :
 ```js
 
 // translation file
