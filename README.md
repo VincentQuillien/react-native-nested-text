@@ -51,8 +51,6 @@ const latin = {
 }
 
 // react component
-import Text from 'react-native-nested-text';
-
 const { blue, red, green } = stylesheet;
 
 const LoremIpsum = () => (
