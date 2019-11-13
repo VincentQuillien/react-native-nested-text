@@ -56,13 +56,13 @@ const { blue, red, green } = stylesheet;
 const LoremIpsum = () => (
   <Text>
     {loremIpsum[0]}
-    <Text style={styles.b}>
+    <Text style={blue}>
       {loremIpsum[1]}
-      <Text style={styles.r}>{loremIpsum[2]}</Text>
+      <Text style={red}>{loremIpsum[2]}</Text>
       {loremIpsum[3]}
     </Text>
     {loremIpsum[4]}
-    <Text style={styles.g}>{loremIpsum[5]}</Text>
+    <Text style={green}>{loremIpsum[5]}</Text>
     {loremIpsum[6]}
   </Text>
 );
