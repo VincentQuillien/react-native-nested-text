@@ -27,7 +27,7 @@
   "license": "",
   "peerDependencies": {
     "react": "^16.9",
-    "react-native": "^0.60"
+    "react-native": "^0.62"
   },
   "dependencies": {},
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@types/react-native": "^0.60",
     "prettier": "^1.18.2",
     "react": "^16.9",
-    "react-native": "^0.60",
+    "react-native": "^0.62",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.1-rc"
